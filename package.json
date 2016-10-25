@@ -11,8 +11,7 @@
     "angular": "^1.5.8"
   },
   "devDependencies": {
-    "hackages": "0.0.9",
-    "npm-run-all": "^3.1.1",
-    "yarn": "^0.16.1"
+    "hackages": "0.0.10",
+    "npm-run-all": "^3.1.1"
   }
 }
