@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "npm-run-all --parallel watch live",
-    "live": "hackages live",
+    "live": "live-server",
     "watch": "hackages watch"
   },
   "license": "MIT",
@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "hackages": "0.0.10",
+    "live-server": "^1.1.0",
     "npm-run-all": "^3.1.1"
   }
 }
