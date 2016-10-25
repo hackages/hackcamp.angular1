@@ -2,17 +2,26 @@
   "name": "bookstore.angular",
   "version": "1.0.0",
   "scripts": {
+    "prestart": "npm i",
     "start": "npm-run-all --parallel watch live",
     "live": "live-server",
-    "watch": "hackages watch"
+    "watch": "webpack -w"
   },
   "license": "MIT",
   "dependencies": {
     "angular": "^1.5.8"
   },
   "devDependencies": {
-    "hackages": "0.0.10",
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "file-loader": "^0.9.0",
+    "hackages": "0.0.6",
+    "html-loader": "^0.4.4",
     "live-server": "^1.1.0",
-    "npm-run-all": "^3.1.1"
+    "npm-run-all": "^3.1.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
   }
 }
