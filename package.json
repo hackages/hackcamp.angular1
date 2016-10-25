@@ -1,0 +1,18 @@
+{
+  "name": "bookstore.angular",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm-run-all --parallel watch live",
+    "live": "hack live",
+    "watch": "hack watch"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.8"
+  },
+  "devDependencies": {
+    "hackages": "0.0.8",
+    "npm-run-all": "^3.1.1",
+    "yarn": "^0.16.1"
+  }
+}
