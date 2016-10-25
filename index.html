@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Getting Angular 1 right!!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <!-- Managed by NavController -->
+    <header class="header">
+      <div class='overlay'>
+        <div class='logo'>
+          <h1>Title should go here</h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+
+    <!--Menu filters-->
+    <!-- Managed by MenuController -->
+    <div class="tab-filter-wrapper">
+      <div class="tab-filter">
+        <ul>
+          <li class="placeholder">
+            <a data-type="all" href="#0">All</a>
+          </li>
+          <li ng-repeat="category in categories" click="changeCategory(category)">
+            <a class="category.selected? 'selected': ''" href="#0">category.name</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--List of books-->
+    <!-- Managed by BooksController -->
+    <section class="gallery">
+      <ul>
+        <li ng-repeat="book in model.books"><img src="book.cover" click="clicked"/></li>
+      </ul>
+    </section>
+
+    <!-- Sidebar navigation -->
+    <!-- Managed by SideBarController -->
+    <div>
+      <div class="!sidebar.navClosed ? 'filter filter-is-visible': 'filter'">
+        <form>
+          <div class="filter-block">
+            <h4>Search</h4>
+            <div class="filter-content">
+              <input type="search" placeholder="title, price..." change="search()"/>
+            </div>
+          </div>
+        </form>
+        <a href="#0" class="close" click="toggleSideBar">Close</a>
+      </div>
+
+      <a href="#0" class="filter-trigger" click="toggleSideBar">Filters</a>
+    </div>
+    </main>
+    <script src="dist/index.js"></script>
+  </body>
+</html>
