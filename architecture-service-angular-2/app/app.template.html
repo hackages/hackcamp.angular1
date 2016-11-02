@@ -1,0 +1,48 @@
+<header class="header">
+    <div class='overlay'>
+    <div class='logo'>
+      <h1>{{title}}</h1>
+    </div>
+    </div>
+</header>
+<main class="main-content">
+    <!--Menu filters-->
+    <div class="tab-filter-wrapper">
+        <div class="tab-filter">
+            <ul>
+                <li class="placeholder">
+                    <a data-type="all" href="#0">All</a>
+                </li>
+                <li ngFor="let category in categories" click="changeCategory(category)">
+                    <a class.selected="category.selected" href="#0">{{category.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--List of books-->
+    <section class="gallery" class.filter-is-visible="">
+        <ul>
+            <li ngFor="let book in books">
+                <img src="book.cover" click="clicked"/>
+            </li>
+        </ul>
+    </section>
+
+    <!--Sidebar navigation-->
+    <div>
+        <div class.filter-is-visible="!navClosed" class="filter">
+            <form>
+                <div class="filter-block">
+                    <h4>Search</h4>
+                    <div class="filter-content">
+                        <input ngModel="searchTerm" name="searchTerm" type="search" placeholder="title, category..." input="search()"/>
+                    </div>
+                </div>
+            </form>
+            <a href="#" class="close" click="toggleSideBar()">Close</a>
+        </div>
+
+        <a href="#" class="filter-trigger" click="toggleSideBar()">Filters</a>
+    </div>
+</main>
